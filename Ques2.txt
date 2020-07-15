@@ -1,0 +1,31 @@
+Question 2:
+
+var: The scope of a variable defined with the keyword “var” is limited to the “function” within which it is defined. If it is defined outside any function, the scope of the variable is global.
+var is “function scoped”.
+
+ ex: function begin () {
+ for (var i=0; i<5; i++) {
+  console.log(i) 
+ }
+// i is accessible outside the for loop
+ console.log(i)
+}
+
+let: The scope of a variable defined with the keyword “let” or “const” is limited to the “block” defined by curly braces i.e. {} .
+“let” and “const” are“block scoped”.
+
+ ex:function begin () {
+ for (let i=0; i<5; i++) {
+  console.log(i) 
+ }
+// i is not defined and will return an error
+ console.log(i)
+}
+
+const: The scope of a variable defined with the keyword “const” is limited to the block defined by curly braces. However if a variable is defined with keyword const, it cannot be reassigned.
+“const” cannot be re-assigned to a new value. However it CAN be mutated.
+
+ ex:const name = 'Adhithi';
+let age = 25;
+// can reassign age
+age = 27;
